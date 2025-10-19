@@ -1,0 +1,2198 @@
+[0m18:35:45.865785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001937223FF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001936FE60170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019370949D30>]}
+
+
+============================== 18:35:45.872434 | 5758661c-5c9f-4b58-90ac-5334fa5af512 ==============================
+[0m18:35:45.872434 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:35:45.874646 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'empty': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:35:45.918359 [info ] [MainThread]: dbt version: 1.10.13
+[0m18:35:45.919425 [info ] [MainThread]: python version: 3.12.9
+[0m18:35:45.921308 [info ] [MainThread]: python path: C:\Users\aritra.ganguly\AppData\Local\miniconda3\python.exe
+[0m18:35:45.921308 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m18:35:47.367388 [info ] [MainThread]: Using profiles dir at C:\Users\aritra.ganguly\.dbt
+[0m18:35:47.367388 [info ] [MainThread]: Using profiles.yml file at C:\Users\aritra.ganguly\.dbt\profiles.yml
+[0m18:35:47.371726 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\dbt_project.yml
+[0m18:35:47.373844 [info ] [MainThread]: adapter type: snowflake
+[0m18:35:47.373844 [info ] [MainThread]: adapter version: 1.10.2
+[0m18:35:47.618734 [info ] [MainThread]: Configuration:
+[0m18:35:47.619882 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:35:47.620886 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:35:47.620886 [info ] [MainThread]: Required dependencies:
+[0m18:35:47.622205 [debug] [MainThread]: Executing "git --help"
+[0m18:35:47.714687 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:35:47.716757 [debug] [MainThread]: STDERR: "b''"
+[0m18:35:47.716757 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:35:47.719280 [info ] [MainThread]: Connection:
+[0m18:35:47.720454 [info ] [MainThread]:   account: egkpdig-ra97378
+[0m18:35:47.720454 [info ] [MainThread]:   user: dbt
+[0m18:35:47.722282 [info ] [MainThread]:   database: MOVIELENS
+[0m18:35:47.722282 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m18:35:47.723311 [info ] [MainThread]:   role: TRANSFORM
+[0m18:35:47.724421 [info ] [MainThread]:   schema: DEV
+[0m18:35:47.724421 [info ] [MainThread]:   authenticator: None
+[0m18:35:47.725437 [info ] [MainThread]:   oauth_client_id: None
+[0m18:35:47.725437 [info ] [MainThread]:   query_tag: None
+[0m18:35:47.726673 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:35:47.726673 [info ] [MainThread]:   host: None
+[0m18:35:47.727680 [info ] [MainThread]:   port: None
+[0m18:35:47.728614 [info ] [MainThread]:   proxy_host: None
+[0m18:35:47.730627 [info ] [MainThread]:   proxy_port: None
+[0m18:35:47.730627 [info ] [MainThread]:   protocol: None
+[0m18:35:47.730627 [info ] [MainThread]:   connect_retries: 1
+[0m18:35:47.732638 [info ] [MainThread]:   connect_timeout: None
+[0m18:35:47.732638 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:35:47.734650 [info ] [MainThread]:   retry_all: False
+[0m18:35:47.734650 [info ] [MainThread]:   insecure_mode: False
+[0m18:35:47.734650 [info ] [MainThread]:   reuse_connections: True
+[0m18:35:47.734650 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m18:35:47.737438 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:35:48.723849 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:35:53.744323 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:35:53.744323 [debug] [MainThread]: On debug: select 1 as id
+[0m18:35:53.744323 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:35:56.471839 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.717 seconds
+[0m18:35:56.471839 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:35:56.471839 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:35:56.479534 [debug] [MainThread]: Command `dbt debug` succeeded at 18:35:56.471839 after 10.81 seconds
+[0m18:35:56.479534 [debug] [MainThread]: Connection 'debug' was left open.
+[0m18:35:56.479534 [debug] [MainThread]: On debug: Close
+[0m18:35:56.658576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019373000A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001937FAA7470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193732DF3B0>]}
+[0m18:35:56.659575 [debug] [MainThread]: Flushing usage events
+[0m18:35:58.673463 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:36:07.206810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029645C50B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002964711BCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029646A14740>]}
+
+
+============================== 18:36:07.214526 | 867657d1-8d57-4d00-aaf8-e7350d3f2af2 ==============================
+[0m18:36:07.214526 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:36:07.214526 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt deps', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'warn_error': 'None', 'empty': 'None', 'introspect': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'log_format': 'default', 'fail_fast': 'False'}
+[0m18:36:07.542437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '867657d1-8d57-4d00-aaf8-e7350d3f2af2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002964606DEE0>]}
+[0m18:36:07.623917 [debug] [MainThread]: Set downloads directory='C:\Users\ARITRA~1.GAN\AppData\Local\Temp\dbt-downloads-ff8ziswc'
+[0m18:36:07.624981 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m18:36:08.569111 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m18:36:08.569111 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m18:36:09.372325 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m18:36:09.382975 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m18:36:12.848141 [info ] [MainThread]: Installed from version 1.3.1
+[0m18:36:12.852032 [info ] [MainThread]: Up to date!
+[0m18:36:12.852539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '867657d1-8d57-4d00-aaf8-e7350d3f2af2', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029647208980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002964606F8C0>]}
+[0m18:36:12.856823 [debug] [MainThread]: Command `dbt deps` succeeded at 18:36:12.856823 after 5.85 seconds
+[0m18:36:12.856823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296445CFCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029646B6B3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029646A14740>]}
+[0m18:36:12.858834 [debug] [MainThread]: Flushing usage events
+[0m18:36:14.552678 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:36:25.196703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E512FE1820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E512B1E720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E50F9ED670>]}
+
+
+============================== 18:36:25.210628 | 9aaeade6-730b-46e7-8f4d-dd308286b5b7 ==============================
+[0m18:36:25.210628 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:36:25.210628 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt compile', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'cache_selected_only': 'False', 'introspect': 'True', 'empty': 'False', 'use_colors': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'no_print': 'None', 'debug': 'False', 'log_format': 'default', 'fail_fast': 'False'}
+[0m18:36:26.957456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E535088B00>]}
+[0m18:36:27.094958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E513093CE0>]}
+[0m18:36:27.096967 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:36:27.945293 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m18:36:27.945293 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:36:27.945293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E535124F50>]}
+[0m18:36:35.220867 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m18:36:35.222365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E536AB7440>]}
+[0m18:36:35.828671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E536A18980>]}
+[0m18:36:36.088762 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:36:36.129156 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:36:36.186856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E536AB5760>]}
+[0m18:36:36.188865 [info ] [MainThread]: Found 13 models, 1 snapshot, 1 analysis, 16 data tests, 1 seed, 6 sources, 609 macros
+[0m18:36:36.188865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E536BAE420>]}
+[0m18:36:36.195910 [info ] [MainThread]: 
+[0m18:36:36.195910 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:36:36.195910 [info ] [MainThread]: 
+[0m18:36:36.200576 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:36:36.215850 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS_snapshots'
+[0m18:36:36.441723 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_snapshots"
+[0m18:36:36.441723 [debug] [ThreadPool]: On list_MOVIELENS_snapshots: show objects in MOVIELENS.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_snapshots"} */;
+[0m18:36:36.443047 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:36:38.826220 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.387 seconds
+[0m18:36:38.832621 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MOVIELENS_snapshots, now list_MOVIELENS_DEV)
+[0m18:36:38.837278 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_DEV"
+[0m18:36:38.838433 [debug] [ThreadPool]: On list_MOVIELENS_DEV: show objects in MOVIELENS.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_DEV"} */;
+[0m18:36:38.992273 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 0.155 seconds
+[0m18:36:39.002003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9aaeade6-730b-46e7-8f4d-dd308286b5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E536AE62A0>]}
+[0m18:36:39.009182 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_genome_score
+[0m18:36:39.011282 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.movielens_dbt.src_genome_score'
+[0m18:36:39.011282 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_genome_score
+[0m18:36:39.017744 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_genome_score"
+[0m18:36:39.017744 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_genome_score
+[0m18:36:39.027948 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_genome_score
+[0m18:36:39.027948 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_genome_tags
+[0m18:36:39.027948 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_genome_score, now model.movielens_dbt.src_genome_tags)
+[0m18:36:39.027948 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_genome_tags
+[0m18:36:39.035704 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_genome_tags"
+[0m18:36:39.036810 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_genome_tags
+[0m18:36:39.038004 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_genome_tags
+[0m18:36:39.039330 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_links
+[0m18:36:39.039330 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_genome_tags, now model.movielens_dbt.src_links)
+[0m18:36:39.040351 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_links
+[0m18:36:39.044379 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_links"
+[0m18:36:39.051004 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_links
+[0m18:36:39.053110 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_links
+[0m18:36:39.053110 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_movies
+[0m18:36:39.054224 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_links, now model.movielens_dbt.src_movies)
+[0m18:36:39.055230 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_movies
+[0m18:36:39.059675 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_movies"
+[0m18:36:39.059675 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_movies
+[0m18:36:39.059675 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_movies
+[0m18:36:39.059675 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_ratings
+[0m18:36:39.059675 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_movies, now model.movielens_dbt.src_ratings)
+[0m18:36:39.059675 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_ratings
+[0m18:36:39.068245 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_ratings"
+[0m18:36:39.069546 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_ratings
+[0m18:36:39.070815 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_ratings
+[0m18:36:39.070815 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_tags
+[0m18:36:39.070815 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_ratings, now model.movielens_dbt.src_tags)
+[0m18:36:39.070815 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_tags
+[0m18:36:39.076064 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_tags"
+[0m18:36:39.076064 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_tags
+[0m18:36:39.076064 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_tags
+[0m18:36:39.076064 [debug] [Thread-1 (]: Began running node seed.movielens_dbt.seed_movie_release_dates
+[0m18:36:39.076064 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_tags, now seed.movielens_dbt.seed_movie_release_dates)
+[0m18:36:39.076064 [debug] [Thread-1 (]: Began compiling node seed.movielens_dbt.seed_movie_release_dates
+[0m18:36:39.081968 [debug] [Thread-1 (]: Began executing node seed.movielens_dbt.seed_movie_release_dates
+[0m18:36:39.081968 [debug] [Thread-1 (]: Finished running node seed.movielens_dbt.seed_movie_release_dates
+[0m18:36:39.081968 [debug] [Thread-1 (]: Began running node model.movielens_dbt.fct_genome_scores
+[0m18:36:39.081968 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.movielens_dbt.seed_movie_release_dates, now model.movielens_dbt.fct_genome_scores)
+[0m18:36:39.081968 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.fct_genome_scores
+[0m18:36:39.091490 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.fct_genome_scores"
+[0m18:36:39.091490 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.fct_genome_scores
+[0m18:36:39.095160 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.fct_genome_scores
+[0m18:36:39.095160 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_genome_tags
+[0m18:36:39.095160 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.fct_genome_scores, now model.movielens_dbt.dim_genome_tags)
+[0m18:36:39.096902 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_genome_tags
+[0m18:36:39.096902 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_genome_tags"
+[0m18:36:39.096902 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.dim_genome_tags
+[0m18:36:39.105953 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_genome_tags
+[0m18:36:39.106962 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_movies
+[0m18:36:39.106962 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_genome_tags, now model.movielens_dbt.dim_movies)
+[0m18:36:39.108969 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_movies
+[0m18:36:39.112982 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_movies"
+[0m18:36:39.114991 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.dim_movies
+[0m18:36:39.116363 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_movies
+[0m18:36:39.116363 [debug] [Thread-1 (]: Began running node model.movielens_dbt.fct_ratings
+[0m18:36:39.117472 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_movies, now model.movielens_dbt.fct_ratings)
+[0m18:36:39.117472 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.fct_ratings
+[0m18:36:39.122571 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.fct_ratings"
+[0m18:36:39.122571 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.fct_ratings
+[0m18:36:39.122571 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.fct_ratings
+[0m18:36:39.122571 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_users
+[0m18:36:39.122571 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.fct_ratings, now model.movielens_dbt.dim_users)
+[0m18:36:39.131711 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_users
+[0m18:36:39.136037 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_users"
+[0m18:36:39.138187 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.dim_users
+[0m18:36:39.138187 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_users
+[0m18:36:39.138187 [debug] [Thread-1 (]: Began running node snapshot.movielens_dbt.snap_tags
+[0m18:36:39.138187 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_users, now snapshot.movielens_dbt.snap_tags)
+[0m18:36:39.141256 [debug] [Thread-1 (]: Began compiling node snapshot.movielens_dbt.snap_tags
+[0m18:36:39.147281 [debug] [Thread-1 (]: Began executing node snapshot.movielens_dbt.snap_tags
+[0m18:36:39.147281 [debug] [Thread-1 (]: Finished running node snapshot.movielens_dbt.snap_tags
+[0m18:36:39.149290 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:36:39.149290 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly snapshot.movielens_dbt.snap_tags, now test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a)
+[0m18:36:39.149290 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:36:39.154035 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a"
+[0m18:36:39.154035 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:36:39.154035 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:36:39.154035 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:36:39.169958 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a, now test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1)
+[0m18:36:39.169958 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:36:39.169958 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1"
+[0m18:36:39.169958 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:36:39.169958 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:36:39.169958 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:36:39.169958 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1, now test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620)
+[0m18:36:39.180524 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:36:39.185907 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620"
+[0m18:36:39.194277 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:36:39.194277 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:36:39.196286 [debug] [Thread-1 (]: Began running node test.movielens_dbt.relevence_score_test
+[0m18:36:39.196286 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620, now test.movielens_dbt.relevence_score_test)
+[0m18:36:39.198293 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.relevence_score_test
+[0m18:36:39.201546 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.relevence_score_test"
+[0m18:36:39.201546 [debug] [Thread-1 (]: On test.movielens_dbt.relevence_score_test: describe table MOVIELENS.DEV.fct_genome_scores
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.relevence_score_test"} */
+[0m18:36:39.201546 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:36:41.042824 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 1.835 seconds
+[0m18:36:41.054388 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.relevence_score_test"
+[0m18:36:41.056772 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.relevence_score_test
+[0m18:36:41.056772 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.relevence_score_test
+[0m18:36:41.056772 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:36:41.056772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.relevence_score_test, now test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f)
+[0m18:36:41.056772 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:36:41.070397 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f"
+[0m18:36:41.072748 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:36:41.072748 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:36:41.072748 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:36:41.072748 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f, now test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804)
+[0m18:36:41.077683 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:36:41.085015 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804"
+[0m18:36:41.087730 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:36:41.087730 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:36:41.089739 [debug] [Thread-1 (]: Began running node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:36:41.090798 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804, now test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe)
+[0m18:36:41.090798 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:36:41.108588 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe"
+[0m18:36:41.110599 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:36:41.113381 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:36:41.113381 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_movies_with_tags
+[0m18:36:41.115451 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe, now model.movielens_dbt.dim_movies_with_tags)
+[0m18:36:41.115451 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_movies_with_tags
+[0m18:36:41.122955 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_movies_with_tags"
+[0m18:36:41.130998 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_movies_with_tags
+[0m18:36:41.130998 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:36:41.132428 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_movies_with_tags, now test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d)
+[0m18:36:41.132428 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:36:41.140029 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d"
+[0m18:36:41.141090 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:36:41.143140 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:36:41.143140 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:36:41.143140 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d, now test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81)
+[0m18:36:41.145248 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:36:41.151582 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81"
+[0m18:36:41.153726 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:36:41.154234 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:36:41.155251 [debug] [Thread-1 (]: Began running node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:36:41.156244 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81, now test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b)
+[0m18:36:41.156244 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:36:41.162898 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b"
+[0m18:36:41.164897 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:36:41.165898 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:36:41.166897 [debug] [Thread-1 (]: Began running node model.movielens_dbt.mart_movie_releases
+[0m18:36:41.166897 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b, now model.movielens_dbt.mart_movie_releases)
+[0m18:36:41.167903 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.mart_movie_releases
+[0m18:36:41.172903 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.mart_movie_releases"
+[0m18:36:41.173905 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.mart_movie_releases
+[0m18:36:41.175374 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.mart_movie_releases
+[0m18:36:41.176655 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:36:41.177430 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.mart_movie_releases, now test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553)
+[0m18:36:41.178572 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:36:41.184599 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553"
+[0m18:36:41.184599 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:36:41.186608 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:36:41.186608 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:36:41.186608 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553, now test.movielens_dbt.not_null_fct_ratings_rating.25c6481558)
+[0m18:36:41.186608 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:36:41.195143 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_ratings_rating.25c6481558"
+[0m18:36:41.197363 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:36:41.197363 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:36:41.197363 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:36:41.200344 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_ratings_rating.25c6481558, now test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf)
+[0m18:36:41.200344 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:36:41.206959 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf"
+[0m18:36:41.208012 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:36:41.210210 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:36:41.210210 [debug] [Thread-1 (]: Began running node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:36:41.210210 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf, now test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0)
+[0m18:36:41.210210 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:36:41.210210 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0"
+[0m18:36:41.210210 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:36:41.224002 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:36:41.225458 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:36:41.225458 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0, now test.movielens_dbt.not_null_dim_users_user_id.e754bb5812)
+[0m18:36:41.226615 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:36:41.232848 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_users_user_id.e754bb5812"
+[0m18:36:41.234075 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:36:41.234075 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:36:41.234075 [debug] [Thread-1 (]: Began running node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:36:41.234075 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_users_user_id.e754bb5812, now test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9)
+[0m18:36:41.234075 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:36:41.243023 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9"
+[0m18:36:41.246903 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:36:41.246903 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:36:41.248912 [debug] [Thread-1 (]: Began running node analysis.movielens_dbt.movie_analysis
+[0m18:36:41.248912 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9, now analysis.movielens_dbt.movie_analysis)
+[0m18:36:41.248912 [debug] [Thread-1 (]: Began compiling node analysis.movielens_dbt.movie_analysis
+[0m18:36:41.273902 [debug] [Thread-1 (]: Writing injected SQL for node "analysis.movielens_dbt.movie_analysis"
+[0m18:36:41.276281 [debug] [Thread-1 (]: Began executing node analysis.movielens_dbt.movie_analysis
+[0m18:36:41.278291 [debug] [Thread-1 (]: Finished running node analysis.movielens_dbt.movie_analysis
+[0m18:36:41.280293 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:36:41.280293 [debug] [MainThread]: Connection 'list_MOVIELENS_DEV' was left open.
+[0m18:36:41.280293 [debug] [MainThread]: On list_MOVIELENS_DEV: Close
+[0m18:36:41.559485 [debug] [MainThread]: Connection 'analysis.movielens_dbt.movie_analysis' was left open.
+[0m18:36:41.559485 [debug] [MainThread]: On analysis.movielens_dbt.movie_analysis: Close
+[0m18:36:41.711283 [debug] [MainThread]: Command end result
+[0m18:36:41.758162 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:36:41.780876 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:36:41.797965 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\run_results.json
+[0m18:36:41.797965 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m18:36:41.801161 [debug] [MainThread]: Command `dbt compile` succeeded at 18:36:41.801161 after 16.81 seconds
+[0m18:36:41.801161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5136E99A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E5136EA840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E512FBF080>]}
+[0m18:36:41.801161 [debug] [MainThread]: Flushing usage events
+[0m18:36:43.474805 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:37:06.274970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169D0D38B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169CE3E00E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169D0813800>]}
+
+
+============================== 18:37:06.290729 | 40cc77d5-4906-417e-9359-6a4eaaa47c79 ==============================
+[0m18:37:06.290729 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:37:06.290729 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'empty': 'False', 'write_json': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:37:08.129769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169D18768D0>]}
+[0m18:37:08.258198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F268FD10>]}
+[0m18:37:08.258198 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:37:09.033061 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m18:37:09.475812 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:37:09.475812 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:37:09.631104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F295C170>]}
+[0m18:37:09.889184 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:37:09.895258 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:37:09.943329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F3BDC7A0>]}
+[0m18:37:09.945641 [info ] [MainThread]: Found 13 models, 1 snapshot, 1 analysis, 16 data tests, 1 seed, 6 sources, 609 macros
+[0m18:37:09.945641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F3955EB0>]}
+[0m18:37:09.947815 [info ] [MainThread]: 
+[0m18:37:09.947815 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:37:09.947815 [info ] [MainThread]: 
+[0m18:37:09.947815 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:37:09.963667 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS'
+[0m18:37:10.290313 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS"
+[0m18:37:10.290313 [debug] [ThreadPool]: On list_MOVIELENS: show terse schemas in database MOVIELENS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS"} */
+[0m18:37:10.290313 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:37:12.453007 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.150 seconds
+[0m18:37:12.458469 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS_snapshots'
+[0m18:37:12.482053 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_snapshots"
+[0m18:37:12.483108 [debug] [ThreadPool]: On list_MOVIELENS_snapshots: show objects in MOVIELENS.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_snapshots"} */;
+[0m18:37:12.483108 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:37:14.107985 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.625 seconds
+[0m18:37:14.111372 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MOVIELENS_snapshots, now list_MOVIELENS_DEV)
+[0m18:37:14.118660 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_DEV"
+[0m18:37:14.118660 [debug] [ThreadPool]: On list_MOVIELENS_DEV: show objects in MOVIELENS.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_DEV"} */;
+[0m18:37:14.246840 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 0.134 seconds
+[0m18:37:14.260734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F2935A60>]}
+[0m18:37:14.268273 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_genome_score
+[0m18:37:14.268273 [info ] [Thread-1 (]: 1 of 12 START sql view model DEV.src_genome_score .............................. [RUN]
+[0m18:37:14.270271 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.movielens_dbt.src_genome_score'
+[0m18:37:14.270271 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_genome_score
+[0m18:37:14.282818 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_genome_score"
+[0m18:37:14.282818 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_genome_score
+[0m18:37:14.383244 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.src_genome_score"
+[0m18:37:14.387638 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.src_genome_score"
+[0m18:37:14.387638 [debug] [Thread-1 (]: On model.movielens_dbt.src_genome_score: create or replace   view MOVIELENS.DEV.src_genome_score
+  
+  
+  
+  
+  as (
+    WITH raw_genome_scores AS
+  (SELECT *
+   FROM MOVIELENS.RAW.RAW_GENOME_SCORES)
+
+SELECT movieId AS movie_id,
+       tagId AS tag_id,
+       relevance
+FROM raw_genome_scores
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.src_genome_score"} */;
+[0m18:37:14.390984 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:37:16.337640 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.946 seconds
+[0m18:37:16.389768 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F43C6570>]}
+[0m18:37:16.392385 [info ] [Thread-1 (]: 1 of 12 OK created sql view model DEV.src_genome_score ......................... [[32mSUCCESS 1[0m in 2.11s]
+[0m18:37:16.392385 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_genome_score
+[0m18:37:16.392385 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_genome_tags
+[0m18:37:16.392385 [info ] [Thread-1 (]: 2 of 12 START sql view model DEV.src_genome_tags ............................... [RUN]
+[0m18:37:16.392385 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_genome_score, now model.movielens_dbt.src_genome_tags)
+[0m18:37:16.398660 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_genome_tags
+[0m18:37:16.400671 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_genome_tags"
+[0m18:37:16.400671 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_genome_tags
+[0m18:37:16.410885 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.src_genome_tags"
+[0m18:37:16.414092 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.src_genome_tags"
+[0m18:37:16.415104 [debug] [Thread-1 (]: On model.movielens_dbt.src_genome_tags: create or replace   view MOVIELENS.DEV.src_genome_tags
+  
+  
+  
+  
+  as (
+    WITH raw_genome_tags AS
+  (SELECT *
+   FROM MOVIELENS.RAW.RAW_GENOME_TAGS)
+
+SELECT tagId AS tag_id,
+       tag
+FROM raw_genome_tags
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.src_genome_tags"} */;
+[0m18:37:16.821488 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.405 seconds
+[0m18:37:16.825510 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F43C55B0>]}
+[0m18:37:16.827021 [info ] [Thread-1 (]: 2 of 12 OK created sql view model DEV.src_genome_tags .......................... [[32mSUCCESS 1[0m in 0.43s]
+[0m18:37:16.827021 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_genome_tags
+[0m18:37:16.829998 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_links
+[0m18:37:16.829998 [info ] [Thread-1 (]: 3 of 12 START sql view model DEV.src_links ..................................... [RUN]
+[0m18:37:16.829998 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_genome_tags, now model.movielens_dbt.src_links)
+[0m18:37:16.829998 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_links
+[0m18:37:16.834899 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_links"
+[0m18:37:16.834899 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_links
+[0m18:37:16.844806 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.src_links"
+[0m18:37:16.853927 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.src_links"
+[0m18:37:16.854926 [debug] [Thread-1 (]: On model.movielens_dbt.src_links: create or replace   view MOVIELENS.DEV.src_links
+  
+  
+  
+  
+  as (
+    WITH raw_links AS
+  (SELECT *
+   FROM MOVIELENS.RAW.RAW_LINKS)
+
+SELECT movieId AS movie_id,
+       imdbId AS imdb_id,
+       tmdbId AS tmdb_id
+FROM raw_links
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.src_links"} */;
+[0m18:37:17.139527 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.283 seconds
+[0m18:37:17.144745 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4B5B5F0>]}
+[0m18:37:17.145746 [info ] [Thread-1 (]: 3 of 12 OK created sql view model DEV.src_links ................................ [[32mSUCCESS 1[0m in 0.31s]
+[0m18:37:17.147976 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_links
+[0m18:37:17.149987 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_movies
+[0m18:37:17.149987 [info ] [Thread-1 (]: 4 of 12 START sql view model DEV.src_movies .................................... [RUN]
+[0m18:37:17.151997 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_links, now model.movielens_dbt.src_movies)
+[0m18:37:17.154006 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_movies
+[0m18:37:17.160039 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_movies"
+[0m18:37:17.162907 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_movies
+[0m18:37:17.174764 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.src_movies"
+[0m18:37:17.178026 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.src_movies"
+[0m18:37:17.179027 [debug] [Thread-1 (]: On model.movielens_dbt.src_movies: create or replace   view MOVIELENS.DEV.src_movies
+  
+  
+  
+  
+  as (
+    WITH raw_movies AS
+  (SELECT *
+   FROM MOVIELENS.RAW.RAW_MOVIES)
+
+SELECT movieId AS movie_id,
+       title,
+       genres
+FROM raw_movies
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.src_movies"} */;
+[0m18:37:17.455903 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.275 seconds
+[0m18:37:17.459266 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4B770B0>]}
+[0m18:37:17.460266 [info ] [Thread-1 (]: 4 of 12 OK created sql view model DEV.src_movies ............................... [[32mSUCCESS 1[0m in 0.31s]
+[0m18:37:17.461265 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_movies
+[0m18:37:17.462265 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_ratings
+[0m18:37:17.463894 [info ] [Thread-1 (]: 5 of 12 START sql view model DEV.src_ratings ................................... [RUN]
+[0m18:37:17.465078 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_movies, now model.movielens_dbt.src_ratings)
+[0m18:37:17.465078 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_ratings
+[0m18:37:17.469366 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_ratings"
+[0m18:37:17.471367 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_ratings
+[0m18:37:17.475544 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.src_ratings"
+[0m18:37:17.478544 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.src_ratings"
+[0m18:37:17.479542 [debug] [Thread-1 (]: On model.movielens_dbt.src_ratings: create or replace   view MOVIELENS.DEV.src_ratings
+  
+  
+  
+  
+  as (
+    WITH raw_ratings AS
+  (SELECT *
+   FROM MOVIELENS.RAW.RAW_RATINGS)
+
+SELECT userId AS user_id,
+       movieId AS movie_id,
+       rating,
+       TO_TIMESTAMP_LTZ(timestamp) AS rating_timestamp
+FROM raw_ratings
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.src_ratings"} */;
+[0m18:37:17.775346 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.295 seconds
+[0m18:37:17.780422 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4A9A420>]}
+[0m18:37:17.781808 [info ] [Thread-1 (]: 5 of 12 OK created sql view model DEV.src_ratings .............................. [[32mSUCCESS 1[0m in 0.32s]
+[0m18:37:17.783071 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_ratings
+[0m18:37:17.784584 [debug] [Thread-1 (]: Began running node model.movielens_dbt.src_tags
+[0m18:37:17.785598 [info ] [Thread-1 (]: 6 of 12 START sql view model DEV.src_tags ...................................... [RUN]
+[0m18:37:17.786893 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_ratings, now model.movielens_dbt.src_tags)
+[0m18:37:17.787863 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.src_tags
+[0m18:37:17.794690 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.src_tags"
+[0m18:37:17.796688 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.src_tags
+[0m18:37:17.803257 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.src_tags"
+[0m18:37:17.805268 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.src_tags"
+[0m18:37:17.807279 [debug] [Thread-1 (]: On model.movielens_dbt.src_tags: create or replace   view MOVIELENS.DEV.src_tags
+  
+  
+  
+  
+  as (
+    WITH raw_tags AS
+  (SELECT *
+   FROM MOVIELENS.RAW.RAW_TAGS)
+
+SELECT userId AS user_id,
+       movieId AS movie_id,
+       tag,
+       TO_TIMESTAMP_LTZ(timestamp) AS tag_timestamp
+FROM raw_tags
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.src_tags"} */;
+[0m18:37:18.095943 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.288 seconds
+[0m18:37:18.099877 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4B5BBF0>]}
+[0m18:37:18.100587 [info ] [Thread-1 (]: 6 of 12 OK created sql view model DEV.src_tags ................................. [[32mSUCCESS 1[0m in 0.31s]
+[0m18:37:18.101690 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.src_tags
+[0m18:37:18.101690 [debug] [Thread-1 (]: Began running node model.movielens_dbt.fct_genome_scores
+[0m18:37:18.102874 [info ] [Thread-1 (]: 7 of 12 START sql table model DEV.fct_genome_scores ............................ [RUN]
+[0m18:37:18.103871 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.src_tags, now model.movielens_dbt.fct_genome_scores)
+[0m18:37:18.105038 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.fct_genome_scores
+[0m18:37:18.110050 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.fct_genome_scores"
+[0m18:37:18.111054 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.fct_genome_scores
+[0m18:37:18.158977 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.fct_genome_scores"
+[0m18:37:18.163155 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_genome_scores"
+[0m18:37:18.163155 [debug] [Thread-1 (]: On model.movielens_dbt.fct_genome_scores: create or replace transient table MOVIELENS.DEV.fct_genome_scores
+    
+    
+    
+    as (WITH src_scores AS
+  (SELECT *
+   FROM MOVIELENS.DEV.src_genome_score)
+
+SELECT movie_id,
+       tag_id,
+       ROUND(relevance, 4) AS relevance_score
+FROM src_scores
+WHERE relevance > 0
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_genome_scores"} */;
+[0m18:37:19.959275 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.794 seconds
+[0m18:37:19.962086 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4B429F0>]}
+[0m18:37:19.962086 [info ] [Thread-1 (]: 7 of 12 OK created sql table model DEV.fct_genome_scores ....................... [[32mSUCCESS 1[0m in 1.86s]
+[0m18:37:19.962086 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.fct_genome_scores
+[0m18:37:19.962086 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_genome_tags
+[0m18:37:19.967228 [info ] [Thread-1 (]: 8 of 12 START sql table model DEV.dim_genome_tags .............................. [RUN]
+[0m18:37:19.967228 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.fct_genome_scores, now model.movielens_dbt.dim_genome_tags)
+[0m18:37:19.967228 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_genome_tags
+[0m18:37:19.974090 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_genome_tags"
+[0m18:37:19.974090 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.dim_genome_tags
+[0m18:37:19.986791 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.dim_genome_tags"
+[0m18:37:19.989789 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.dim_genome_tags"
+[0m18:37:19.990789 [debug] [Thread-1 (]: On model.movielens_dbt.dim_genome_tags: create or replace transient table MOVIELENS.DEV.dim_genome_tags
+    
+    
+    
+    as (WITH src_tags AS
+  (SELECT *
+   FROM MOVIELENS.DEV.src_genome_tags)
+
+SELECT tag_id,
+       INITCAP(TRIM(tag)) AS tag_name
+FROM src_tags
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.dim_genome_tags"} */;
+[0m18:37:20.653025 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.665 seconds
+[0m18:37:20.659861 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4B88320>]}
+[0m18:37:20.662000 [info ] [Thread-1 (]: 8 of 12 OK created sql table model DEV.dim_genome_tags ......................... [[32mSUCCESS 1[0m in 0.69s]
+[0m18:37:20.663382 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_genome_tags
+[0m18:37:20.663382 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_movies
+[0m18:37:20.665391 [info ] [Thread-1 (]: 9 of 12 START sql table model DEV.dim_movies ................................... [RUN]
+[0m18:37:20.666987 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_genome_tags, now model.movielens_dbt.dim_movies)
+[0m18:37:20.668210 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_movies
+[0m18:37:20.674051 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_movies"
+[0m18:37:20.676338 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.dim_movies
+[0m18:37:20.682918 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.dim_movies"
+[0m18:37:20.686004 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.dim_movies"
+[0m18:37:20.687296 [debug] [Thread-1 (]: On model.movielens_dbt.dim_movies: create or replace transient table MOVIELENS.DEV.dim_movies
+    
+    
+    
+    as (WITH src_movies AS
+  (SELECT *
+   FROM MOVIELENS.DEV.src_movies)
+
+SELECT movie_id,
+       INITCAP(TRIM(title)) AS movie_title,
+       SPLIT(genres, '|') AS genre_array,
+       genres
+FROM src_movies
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.dim_movies"} */;
+[0m18:37:21.678109 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.994 seconds
+[0m18:37:21.678109 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4330350>]}
+[0m18:37:21.687944 [info ] [Thread-1 (]: 9 of 12 OK created sql table model DEV.dim_movies .............................. [[32mSUCCESS 1[0m in 1.01s]
+[0m18:37:21.687944 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_movies
+[0m18:37:21.687944 [debug] [Thread-1 (]: Began running node model.movielens_dbt.fct_ratings
+[0m18:37:21.687944 [info ] [Thread-1 (]: 10 of 12 START sql incremental model DEV.fct_ratings ........................... [RUN]
+[0m18:37:21.687944 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_movies, now model.movielens_dbt.fct_ratings)
+[0m18:37:21.687944 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.fct_ratings
+[0m18:37:21.723015 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.fct_ratings"
+[0m18:37:21.724863 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.fct_ratings
+[0m18:37:21.821446 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:21.823445 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: create or replace  temporary view MOVIELENS.DEV.fct_ratings__dbt_tmp
+  
+  
+  
+  
+  as (
+    
+
+WITH src_ratings AS
+  (SELECT *
+   FROM MOVIELENS.DEV.src_ratings)
+
+SELECT user_id,
+       movie_id,
+       rating,
+       rating_timestamp
+FROM src_ratings
+WHERE rating IS NOT NULL
+
+
+  AND rating_timestamp > (SELECT MAX(rating_timestamp) FROM MOVIELENS.DEV.fct_ratings)
+
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */;
+[0m18:37:22.127549 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.304 seconds
+[0m18:37:22.147273 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:22.147273 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: describe table MOVIELENS.DEV.fct_ratings__dbt_tmp
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */
+[0m18:37:22.242576 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.104 seconds
+[0m18:37:22.259525 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:22.259525 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: describe table MOVIELENS.DEV.fct_ratings
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */
+[0m18:37:22.372988 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.110 seconds
+[0m18:37:22.402637 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:22.402637 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: describe table MOVIELENS.DEV.fct_ratings__dbt_tmp
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */
+[0m18:37:22.493828 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.103 seconds
+[0m18:37:22.515728 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:22.517738 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: describe table "MOVIELENS"."DEV"."FCT_RATINGS"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */
+[0m18:37:22.626033 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.107 seconds
+[0m18:37:22.645498 [debug] [Thread-1 (]: 
+    In "MOVIELENS"."DEV"."FCT_RATINGS":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m18:37:22.680631 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.fct_ratings"
+[0m18:37:22.684650 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:22.684650 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: -- back compat for old kwarg name
+  
+  begin
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */;
+[0m18:37:22.801646 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.117 seconds
+[0m18:37:22.801646 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:22.801646 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: insert into MOVIELENS.DEV.fct_ratings ("USER_ID", "MOVIE_ID", "RATING", "RATING_TIMESTAMP")
+        (
+            select "USER_ID", "MOVIE_ID", "RATING", "RATING_TIMESTAMP"
+            from MOVIELENS.DEV.fct_ratings__dbt_tmp
+        )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */;
+[0m18:37:23.055822 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.249 seconds
+[0m18:37:23.055822 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:23.056926 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */
+[0m18:37:23.192944 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.135 seconds
+[0m18:37:23.213436 [debug] [Thread-1 (]: Applying DROP to: MOVIELENS.DEV.fct_ratings__dbt_tmp
+[0m18:37:23.226838 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.fct_ratings"
+[0m18:37:23.227899 [debug] [Thread-1 (]: On model.movielens_dbt.fct_ratings: drop view if exists MOVIELENS.DEV.fct_ratings__dbt_tmp cascade
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.fct_ratings"} */
+[0m18:37:23.354260 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.125 seconds
+[0m18:37:23.357263 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F29359A0>]}
+[0m18:37:23.358261 [info ] [Thread-1 (]: 10 of 12 OK created sql incremental model DEV.fct_ratings ...................... [[32mSUCCESS 0[0m in 1.67s]
+[0m18:37:23.360261 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.fct_ratings
+[0m18:37:23.360261 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_users
+[0m18:37:23.361505 [info ] [Thread-1 (]: 11 of 12 START sql table model DEV.dim_users ................................... [RUN]
+[0m18:37:23.363500 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.fct_ratings, now model.movielens_dbt.dim_users)
+[0m18:37:23.363500 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_users
+[0m18:37:23.371990 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_users"
+[0m18:37:23.374595 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.dim_users
+[0m18:37:23.381677 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.dim_users"
+[0m18:37:23.385676 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.dim_users"
+[0m18:37:23.387673 [debug] [Thread-1 (]: On model.movielens_dbt.dim_users: create or replace transient table MOVIELENS.DEV.dim_users
+    
+    
+    
+    as (WITH ratings AS
+  (SELECT DISTINCT user_id
+   FROM MOVIELENS.DEV.src_ratings),
+     tags AS
+  (SELECT DISTINCT user_id
+   FROM MOVIELENS.DEV.src_tags)
+
+SELECT DISTINCT user_id
+FROM
+  (SELECT *
+   FROM ratings
+   UNION SELECT *
+   FROM tags)
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.dim_users"} */;
+[0m18:37:24.494265 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.108 seconds
+[0m18:37:24.501474 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F43C2CF0>]}
+[0m18:37:24.501474 [info ] [Thread-1 (]: 11 of 12 OK created sql table model DEV.dim_users .............................. [[32mSUCCESS 1[0m in 1.14s]
+[0m18:37:24.504434 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_users
+[0m18:37:24.504434 [debug] [Thread-1 (]: Began running node model.movielens_dbt.dim_movies_with_tags
+[0m18:37:24.504434 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_users, now model.movielens_dbt.dim_movies_with_tags)
+[0m18:37:24.507312 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.dim_movies_with_tags
+[0m18:37:24.516340 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.dim_movies_with_tags"
+[0m18:37:24.518662 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.dim_movies_with_tags
+[0m18:37:24.518662 [debug] [Thread-1 (]: Began running node model.movielens_dbt.mart_movie_releases
+[0m18:37:24.521687 [info ] [Thread-1 (]: 12 of 12 START sql table model DEV.mart_movie_releases ......................... [RUN]
+[0m18:37:24.521687 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.movielens_dbt.dim_movies_with_tags, now model.movielens_dbt.mart_movie_releases)
+[0m18:37:24.524564 [debug] [Thread-1 (]: Began compiling node model.movielens_dbt.mart_movie_releases
+[0m18:37:24.532971 [debug] [Thread-1 (]: Writing injected SQL for node "model.movielens_dbt.mart_movie_releases"
+[0m18:37:24.535274 [debug] [Thread-1 (]: Began executing node model.movielens_dbt.mart_movie_releases
+[0m18:37:24.547917 [debug] [Thread-1 (]: Writing runtime sql for node "model.movielens_dbt.mart_movie_releases"
+[0m18:37:24.552019 [debug] [Thread-1 (]: Using snowflake connection "model.movielens_dbt.mart_movie_releases"
+[0m18:37:24.553022 [debug] [Thread-1 (]: On model.movielens_dbt.mart_movie_releases: create or replace transient table MOVIELENS.DEV.mart_movie_releases
+    
+    
+    
+    as (
+
+WITH fct_ratings AS
+  (SELECT *
+   FROM MOVIELENS.DEV.fct_ratings),
+     seed_dates AS
+  (SELECT *
+   FROM MOVIELENS.DEV.seed_movie_release_dates)
+
+SELECT f.*,
+       CASE
+           WHEN d.release_date IS NULL THEN 'unknown'
+           ELSE 'known'
+       END AS release_info_available
+FROM fct_ratings f
+LEFT JOIN seed_dates d ON f.movie_id = d.movie_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "model.movielens_dbt.mart_movie_releases"} */;
+[0m18:37:29.372549 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 4.818 seconds
+[0m18:37:29.375811 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '40cc77d5-4906-417e-9359-6a4eaaa47c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F4BFAE10>]}
+[0m18:37:29.377258 [info ] [Thread-1 (]: 12 of 12 OK created sql table model DEV.mart_movie_releases .................... [[32mSUCCESS 1[0m in 4.85s]
+[0m18:37:29.379272 [debug] [Thread-1 (]: Finished running node model.movielens_dbt.mart_movie_releases
+[0m18:37:29.381314 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:37:29.381314 [debug] [MainThread]: Connection 'list_MOVIELENS' was left open.
+[0m18:37:29.382311 [debug] [MainThread]: On list_MOVIELENS: Close
+[0m18:37:29.537661 [debug] [MainThread]: Connection 'list_MOVIELENS_DEV' was left open.
+[0m18:37:29.539695 [debug] [MainThread]: On list_MOVIELENS_DEV: Close
+[0m18:37:29.703061 [debug] [MainThread]: Connection 'model.movielens_dbt.mart_movie_releases' was left open.
+[0m18:37:29.705068 [debug] [MainThread]: On model.movielens_dbt.mart_movie_releases: Close
+[0m18:37:29.856122 [info ] [MainThread]: 
+[0m18:37:29.856122 [info ] [MainThread]: Finished running 1 incremental model, 5 table models, 6 view models in 0 hours 0 minutes and 19.91 seconds (19.91s).
+[0m18:37:29.862322 [debug] [MainThread]: Command end result
+[0m18:37:29.956546 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:37:29.963938 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:37:29.976440 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\run_results.json
+[0m18:37:29.976440 [info ] [MainThread]: 
+[0m18:37:29.977955 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:37:29.979207 [info ] [MainThread]: 
+[0m18:37:29.979207 [info ] [MainThread]: Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+[0m18:37:29.981216 [debug] [MainThread]: Command `dbt run` succeeded at 18:37:29.981216 after 23.92 seconds
+[0m18:37:29.981216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169D0D38B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F3DE9A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169F3C7DC10>]}
+[0m18:37:29.982218 [debug] [MainThread]: Flushing usage events
+[0m18:37:32.327819 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:37:41.269445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002132140BD70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021321EEB7A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021323EE6F90>]}
+
+
+============================== 18:37:41.274560 | 7a063d5d-675c-41c3-a8ed-d2eebb8c5a63 ==============================
+[0m18:37:41.274560 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:37:41.274560 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt seed', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'warn_error': 'None', 'write_json': 'True', 'introspect': 'True', 'empty': 'None', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:37:43.035420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002134588C980>]}
+[0m18:37:43.143757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021345204230>]}
+[0m18:37:43.145904 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:37:43.837322 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m18:37:44.278051 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:37:44.279112 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:37:44.424714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213458F1760>]}
+[0m18:37:44.694444 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:37:44.697703 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:37:44.742353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021346945A90>]}
+[0m18:37:44.743006 [info ] [MainThread]: Found 13 models, 1 snapshot, 1 analysis, 16 data tests, 1 seed, 6 sources, 609 macros
+[0m18:37:44.744172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021346D6B6E0>]}
+[0m18:37:44.747171 [info ] [MainThread]: 
+[0m18:37:44.748173 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:37:44.748173 [info ] [MainThread]: 
+[0m18:37:44.749662 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:37:44.751743 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS'
+[0m18:37:45.073575 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS"
+[0m18:37:45.073575 [debug] [ThreadPool]: On list_MOVIELENS: show terse schemas in database MOVIELENS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS"} */
+[0m18:37:45.073575 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:37:47.363002 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.290 seconds
+[0m18:37:47.388533 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS_snapshots'
+[0m18:37:47.410764 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_snapshots"
+[0m18:37:47.410764 [debug] [ThreadPool]: On list_MOVIELENS_snapshots: show objects in MOVIELENS.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_snapshots"} */;
+[0m18:37:47.410764 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:37:49.124000 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.710 seconds
+[0m18:37:49.127360 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MOVIELENS_snapshots, now list_MOVIELENS_DEV)
+[0m18:37:49.133107 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_DEV"
+[0m18:37:49.134251 [debug] [ThreadPool]: On list_MOVIELENS_DEV: show objects in MOVIELENS.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_DEV"} */;
+[0m18:37:49.258014 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 0.131 seconds
+[0m18:37:49.258014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213215E78C0>]}
+[0m18:37:49.287443 [debug] [Thread-1 (]: Began running node seed.movielens_dbt.seed_movie_release_dates
+[0m18:37:49.287443 [info ] [Thread-1 (]: 1 of 1 START seed file DEV.seed_movie_release_dates ............................ [RUN]
+[0m18:37:49.287443 [debug] [Thread-1 (]: Acquiring new snowflake connection 'seed.movielens_dbt.seed_movie_release_dates'
+[0m18:37:49.289955 [debug] [Thread-1 (]: Began compiling node seed.movielens_dbt.seed_movie_release_dates
+[0m18:37:49.289955 [debug] [Thread-1 (]: Began executing node seed.movielens_dbt.seed_movie_release_dates
+[0m18:37:49.392410 [debug] [Thread-1 (]: Using snowflake connection "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:49.397783 [debug] [Thread-1 (]: On seed.movielens_dbt.seed_movie_release_dates: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "seed.movielens_dbt.seed_movie_release_dates"} */
+[0m18:37:49.398818 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:37:50.997365 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.599 seconds
+[0m18:37:50.997365 [debug] [Thread-1 (]: Using snowflake connection "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:51.000607 [debug] [Thread-1 (]: On seed.movielens_dbt.seed_movie_release_dates: truncate table "MOVIELENS"."DEV"."SEED_MOVIE_RELEASE_DATES"
+  
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "seed.movielens_dbt.seed_movie_release_dates"} */;
+[0m18:37:51.363232 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.374 seconds
+[0m18:37:51.363232 [debug] [Thread-1 (]: Using snowflake connection "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:51.363232 [debug] [Thread-1 (]: On seed.movielens_dbt.seed_movie_release_dates: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "seed.movielens_dbt.seed_movie_release_dates"} */
+[0m18:37:51.694633 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.318 seconds
+[0m18:37:51.721256 [debug] [Thread-1 (]: Using snowflake connection "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:51.721256 [debug] [Thread-1 (]: On seed.movielens_dbt.seed_movie_release_dates: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "seed.movielens_dbt.seed_movie_release_dates"} */
+[0m18:37:51.837210 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.113 seconds
+[0m18:37:51.839221 [debug] [Thread-1 (]: Using snowflake connection "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:51.839221 [debug] [Thread-1 (]: On seed.movielens_dbt.seed_movie_release_dates: insert into MOVIELENS.DEV.seed_movie_release_dates (movie_id, release_date) values
+            (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "seed.movielens_dbt.seed_movie_release_dates"} */...
+[0m18:37:52.179436 [debug] [Thread-1 (]: SQL status: SUCCESS 10 in 0.339 seconds
+[0m18:37:52.179436 [debug] [Thread-1 (]: Using snowflake connection "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:52.179436 [debug] [Thread-1 (]: On seed.movielens_dbt.seed_movie_release_dates: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "seed.movielens_dbt.seed_movie_release_dates"} */
+[0m18:37:52.499024 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.317 seconds
+[0m18:37:52.507062 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.movielens_dbt.seed_movie_release_dates"
+[0m18:37:52.550845 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a063d5d-675c-41c3-a8ed-d2eebb8c5a63', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213215480E0>]}
+[0m18:37:52.554204 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file DEV.seed_movie_release_dates ........................ [[32mINSERT 10[0m in 3.26s]
+[0m18:37:52.555559 [debug] [Thread-1 (]: Finished running node seed.movielens_dbt.seed_movie_release_dates
+[0m18:37:52.555559 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:37:52.555559 [debug] [MainThread]: Connection 'list_MOVIELENS' was left open.
+[0m18:37:52.555559 [debug] [MainThread]: On list_MOVIELENS: Close
+[0m18:37:52.766563 [debug] [MainThread]: Connection 'list_MOVIELENS_DEV' was left open.
+[0m18:37:52.782353 [debug] [MainThread]: On list_MOVIELENS_DEV: Close
+[0m18:37:52.956054 [debug] [MainThread]: Connection 'seed.movielens_dbt.seed_movie_release_dates' was left open.
+[0m18:37:52.956054 [debug] [MainThread]: On seed.movielens_dbt.seed_movie_release_dates: Close
+[0m18:37:53.110091 [info ] [MainThread]: 
+[0m18:37:53.111599 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 8.36 seconds (8.36s).
+[0m18:37:53.113915 [debug] [MainThread]: Command end result
+[0m18:37:53.222520 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:37:53.228930 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:37:53.246306 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\run_results.json
+[0m18:37:53.247458 [info ] [MainThread]: 
+[0m18:37:53.247458 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:37:53.249552 [info ] [MainThread]: 
+[0m18:37:53.250710 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m18:37:53.252129 [debug] [MainThread]: Command `dbt seed` succeeded at 18:37:53.252129 after 12.21 seconds
+[0m18:37:53.253248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213449452B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021323862E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021323863B90>]}
+[0m18:37:53.254287 [debug] [MainThread]: Flushing usage events
+[0m18:37:55.090562 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:38:18.963151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854E89A4B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854EE19130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854EE18410>]}
+
+
+============================== 18:38:18.972903 | c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80 ==============================
+[0m18:38:18.972903 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:38:18.972903 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt test', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'warn_error': 'None', 'use_colors': 'True', 'introspect': 'True', 'empty': 'None', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'cache_selected_only': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_format': 'default'}
+[0m18:38:20.837031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854F857C20>]}
+[0m18:38:21.007467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854F857650>]}
+[0m18:38:21.009477 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:38:21.803657 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m18:38:22.282908 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:38:22.282908 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:38:22.421829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185708F43B0>]}
+[0m18:38:22.682134 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:38:22.683281 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:38:22.747338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018571E901A0>]}
+[0m18:38:22.749348 [info ] [MainThread]: Found 13 models, 1 snapshot, 1 analysis, 16 data tests, 1 seed, 6 sources, 609 macros
+[0m18:38:22.749348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018571E5BFE0>]}
+[0m18:38:22.751060 [info ] [MainThread]: 
+[0m18:38:22.751060 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:38:22.751060 [info ] [MainThread]: 
+[0m18:38:22.757849 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:38:22.770845 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS_DEV'
+[0m18:38:23.080316 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_DEV"
+[0m18:38:23.080316 [debug] [ThreadPool]: On list_MOVIELENS_DEV: show objects in MOVIELENS.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_DEV"} */;
+[0m18:38:23.080316 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:38:25.411946 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 2.318 seconds
+[0m18:38:25.418041 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MOVIELENS_DEV, now list_MOVIELENS_snapshots)
+[0m18:38:25.425531 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_snapshots"
+[0m18:38:25.430719 [debug] [ThreadPool]: On list_MOVIELENS_snapshots: show objects in MOVIELENS.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_snapshots"} */;
+[0m18:38:25.551695 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.121 seconds
+[0m18:38:25.556836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c00ff4f2-8621-4ae5-8d4a-9e32f76b4b80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854F882B10>]}
+[0m18:38:25.562835 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:38:25.563834 [info ] [Thread-1 (]: 1 of 16 START test not_null_dim_genome_tags_tag_id ............................. [RUN]
+[0m18:38:25.564834 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f'
+[0m18:38:25.565835 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:38:25.621204 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f"
+[0m18:38:25.623694 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:38:25.678650 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f"
+[0m18:38:25.680652 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f"
+[0m18:38:25.682986 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tag_id
+from MOVIELENS.DEV.dim_genome_tags
+where tag_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f"} */
+[0m18:38:25.682986 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:38:27.602002 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.920 seconds
+[0m18:38:27.617823 [info ] [Thread-1 (]: 1 of 16 PASS not_null_dim_genome_tags_tag_id ................................... [[32mPASS[0m in 2.05s]
+[0m18:38:27.621712 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f
+[0m18:38:27.621712 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:38:27.623783 [info ] [Thread-1 (]: 2 of 16 START test not_null_dim_genome_tags_tag_name ........................... [RUN]
+[0m18:38:27.624843 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_genome_tags_tag_id.f11f861a5f, now test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804)
+[0m18:38:27.624843 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:38:27.637411 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804"
+[0m18:38:27.639938 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:38:27.647938 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804"
+[0m18:38:27.650937 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804"
+[0m18:38:27.652938 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tag_name
+from MOVIELENS.DEV.dim_genome_tags
+where tag_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804"} */
+[0m18:38:27.789829 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.136 seconds
+[0m18:38:27.794829 [info ] [Thread-1 (]: 2 of 16 PASS not_null_dim_genome_tags_tag_name ................................. [[32mPASS[0m in 0.17s]
+[0m18:38:27.796829 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804
+[0m18:38:27.797830 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:38:27.798829 [info ] [Thread-1 (]: 3 of 16 START test not_null_dim_movies_movie_id ................................ [RUN]
+[0m18:38:27.799830 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_genome_tags_tag_name.27503c0804, now test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d)
+[0m18:38:27.800830 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:38:27.813509 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d"
+[0m18:38:27.815509 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:38:27.822864 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d"
+[0m18:38:27.831449 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d"
+[0m18:38:27.832449 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select movie_id
+from MOVIELENS.DEV.dim_movies
+where movie_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d"} */
+[0m18:38:28.019548 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.186 seconds
+[0m18:38:28.023560 [info ] [Thread-1 (]: 3 of 16 PASS not_null_dim_movies_movie_id ...................................... [[32mPASS[0m in 0.22s]
+[0m18:38:28.024553 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d
+[0m18:38:28.025584 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:38:28.026597 [info ] [Thread-1 (]: 4 of 16 START test not_null_dim_movies_movie_title ............................. [RUN]
+[0m18:38:28.027600 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_movies_movie_id.0f96ca970d, now test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81)
+[0m18:38:28.028599 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:38:28.039927 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81"
+[0m18:38:28.041143 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:38:28.052208 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81"
+[0m18:38:28.055664 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81"
+[0m18:38:28.057668 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select movie_title
+from MOVIELENS.DEV.dim_movies
+where movie_title is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81"} */
+[0m18:38:28.189000 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.128 seconds
+[0m18:38:28.192427 [info ] [Thread-1 (]: 4 of 16 PASS not_null_dim_movies_movie_title ................................... [[32mPASS[0m in 0.16s]
+[0m18:38:28.193824 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81
+[0m18:38:28.195042 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:38:28.196139 [info ] [Thread-1 (]: 5 of 16 START test not_null_dim_users_user_id .................................. [RUN]
+[0m18:38:28.197187 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_movies_movie_title.0206534c81, now test.movielens_dbt.not_null_dim_users_user_id.e754bb5812)
+[0m18:38:28.198248 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:38:28.204890 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_dim_users_user_id.e754bb5812"
+[0m18:38:28.206088 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:38:28.210087 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_dim_users_user_id.e754bb5812"
+[0m18:38:28.213089 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_dim_users_user_id.e754bb5812"
+[0m18:38:28.214090 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_dim_users_user_id.e754bb5812: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from MOVIELENS.DEV.dim_users
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_dim_users_user_id.e754bb5812"} */
+[0m18:38:28.422497 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.208 seconds
+[0m18:38:28.427509 [info ] [Thread-1 (]: 5 of 16 PASS not_null_dim_users_user_id ........................................ [[32mPASS[0m in 0.23s]
+[0m18:38:28.428509 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_dim_users_user_id.e754bb5812
+[0m18:38:28.429508 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:38:28.430690 [info ] [Thread-1 (]: 6 of 16 START test not_null_fct_genome_scores_movie_id ......................... [RUN]
+[0m18:38:28.431798 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_dim_users_user_id.e754bb5812, now test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a)
+[0m18:38:28.432798 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:38:28.443740 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a"
+[0m18:38:28.446741 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:38:28.454249 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a"
+[0m18:38:28.458041 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a"
+[0m18:38:28.459042 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select movie_id
+from MOVIELENS.DEV.fct_genome_scores
+where movie_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a"} */
+[0m18:38:28.638724 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.178 seconds
+[0m18:38:28.641900 [info ] [Thread-1 (]: 6 of 16 PASS not_null_fct_genome_scores_movie_id ............................... [[32mPASS[0m in 0.21s]
+[0m18:38:28.642957 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a
+[0m18:38:28.644105 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:38:28.645106 [info ] [Thread-1 (]: 7 of 16 START test not_null_fct_genome_scores_relevance_score .................. [RUN]
+[0m18:38:28.645106 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_genome_scores_movie_id.d1288b589a, now test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1)
+[0m18:38:28.646229 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:38:28.652425 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1"
+[0m18:38:28.655164 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:38:28.659357 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1"
+[0m18:38:28.662443 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1"
+[0m18:38:28.663445 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select relevance_score
+from MOVIELENS.DEV.fct_genome_scores
+where relevance_score is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1"} */
+[0m18:38:28.786708 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.122 seconds
+[0m18:38:28.789502 [info ] [Thread-1 (]: 7 of 16 PASS not_null_fct_genome_scores_relevance_score ........................ [[32mPASS[0m in 0.14s]
+[0m18:38:28.790705 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1
+[0m18:38:28.791842 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:38:28.791842 [info ] [Thread-1 (]: 8 of 16 START test not_null_fct_genome_scores_tag_id ........................... [RUN]
+[0m18:38:28.792863 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_genome_scores_relevance_score.20561448f1, now test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620)
+[0m18:38:28.794164 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:38:28.800890 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620"
+[0m18:38:28.802891 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:38:28.809891 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620"
+[0m18:38:28.813303 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620"
+[0m18:38:28.814320 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tag_id
+from MOVIELENS.DEV.fct_genome_scores
+where tag_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620"} */
+[0m18:38:28.940645 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.126 seconds
+[0m18:38:28.943683 [info ] [Thread-1 (]: 8 of 16 PASS not_null_fct_genome_scores_tag_id ................................. [[32mPASS[0m in 0.15s]
+[0m18:38:28.945682 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620
+[0m18:38:28.946679 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:38:28.946679 [info ] [Thread-1 (]: 9 of 16 START test not_null_fct_ratings_movie_id ............................... [RUN]
+[0m18:38:28.947829 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_genome_scores_tag_id.eb610dc620, now test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553)
+[0m18:38:28.948948 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:38:28.955731 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553"
+[0m18:38:28.957234 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:38:28.962547 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553"
+[0m18:38:28.964545 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553"
+[0m18:38:28.965546 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select movie_id
+from MOVIELENS.DEV.fct_ratings
+where movie_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553"} */
+[0m18:38:29.101261 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.136 seconds
+[0m18:38:29.107567 [info ] [Thread-1 (]: 9 of 16 PASS not_null_fct_ratings_movie_id ..................................... [[32mPASS[0m in 0.16s]
+[0m18:38:29.109567 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553
+[0m18:38:29.110568 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:38:29.111568 [info ] [Thread-1 (]: 10 of 16 START test not_null_fct_ratings_rating ................................ [RUN]
+[0m18:38:29.113567 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_ratings_movie_id.68d088c553, now test.movielens_dbt.not_null_fct_ratings_rating.25c6481558)
+[0m18:38:29.114568 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:38:29.124597 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_ratings_rating.25c6481558"
+[0m18:38:29.127607 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:38:29.135606 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_fct_ratings_rating.25c6481558"
+[0m18:38:29.139060 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_fct_ratings_rating.25c6481558"
+[0m18:38:29.140059 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_fct_ratings_rating.25c6481558: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select rating
+from MOVIELENS.DEV.fct_ratings
+where rating is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_fct_ratings_rating.25c6481558"} */
+[0m18:38:29.242544 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.112 seconds
+[0m18:38:29.255624 [info ] [Thread-1 (]: 10 of 16 PASS not_null_fct_ratings_rating ...................................... [[32mPASS[0m in 0.14s]
+[0m18:38:29.257703 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_ratings_rating.25c6481558
+[0m18:38:29.259052 [debug] [Thread-1 (]: Began running node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:38:29.259052 [info ] [Thread-1 (]: 11 of 16 START test not_null_fct_ratings_user_id ............................... [RUN]
+[0m18:38:29.260048 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_ratings_rating.25c6481558, now test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf)
+[0m18:38:29.261116 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:38:29.268117 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf"
+[0m18:38:29.269115 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:38:29.273447 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf"
+[0m18:38:29.276448 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf"
+[0m18:38:29.277446 [debug] [Thread-1 (]: On test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select user_id
+from MOVIELENS.DEV.fct_ratings
+where user_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf"} */
+[0m18:38:29.384337 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.107 seconds
+[0m18:38:29.391242 [info ] [Thread-1 (]: 11 of 16 PASS not_null_fct_ratings_user_id ..................................... [[32mPASS[0m in 0.13s]
+[0m18:38:29.392244 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf
+[0m18:38:29.393585 [debug] [Thread-1 (]: Began running node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:38:29.394816 [info ] [Thread-1 (]: 12 of 16 START test relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_  [RUN]
+[0m18:38:29.395816 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.not_null_fct_ratings_user_id.652655a4cf, now test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0)
+[0m18:38:29.395816 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:38:29.420002 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0"
+[0m18:38:29.422170 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:38:29.429719 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0"
+[0m18:38:29.434719 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0"
+[0m18:38:29.435721 [debug] [Thread-1 (]: On test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select movie_id as from_field
+    from MOVIELENS.DEV.fct_ratings
+    where movie_id is not null
+),
+
+parent as (
+    select movie_id as to_field
+    from MOVIELENS.DEV.dim_movies
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0"} */
+[0m18:38:29.719334 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.283 seconds
+[0m18:38:29.727011 [info ] [Thread-1 (]: 12 of 16 PASS relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_ .... [[32mPASS[0m in 0.33s]
+[0m18:38:29.729007 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0
+[0m18:38:29.730423 [debug] [Thread-1 (]: Began running node test.movielens_dbt.relevence_score_test
+[0m18:38:29.731424 [info ] [Thread-1 (]: 13 of 16 START test relevence_score_test ....................................... [RUN]
+[0m18:38:29.732423 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.relationships_fct_ratings_movie_id__movie_id__ref_dim_movies_.fb3ebb34b0, now test.movielens_dbt.relevence_score_test)
+[0m18:38:29.733424 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.relevence_score_test
+[0m18:38:29.761618 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.relevence_score_test"
+[0m18:38:29.762928 [debug] [Thread-1 (]: On test.movielens_dbt.relevence_score_test: describe table MOVIELENS.DEV.fct_genome_scores
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.relevence_score_test"} */
+[0m18:38:29.883966 [debug] [Thread-1 (]: SQL status: SUCCESS 3 in 0.121 seconds
+[0m18:38:29.886813 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.relevence_score_test"
+[0m18:38:29.889598 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.relevence_score_test
+[0m18:38:29.894122 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.relevence_score_test"
+[0m18:38:29.896522 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.relevence_score_test"
+[0m18:38:29.896522 [debug] [Thread-1 (]: On test.movielens_dbt.relevence_score_test: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- SELECT
+--     movie_id,
+--     tag_id,
+--     relevance_score
+-- FROM MOVIELENS.DEV.fct_genome_scores
+-- WHERE relevance_score <= 0
+
+
+    SELECT * FROM MOVIELENS.DEV.fct_genome_scores WHERE
+    
+        MOVIE_ID IS NULL OR
+    
+        TAG_ID IS NULL OR
+    
+        RELEVANCE_SCORE IS NULL OR
+    
+    FALSE
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.relevence_score_test"} */
+[0m18:38:30.010769 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.113 seconds
+[0m18:38:30.013950 [info ] [Thread-1 (]: 13 of 16 PASS relevence_score_test ............................................. [[32mPASS[0m in 0.28s]
+[0m18:38:30.016990 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.relevence_score_test
+[0m18:38:30.017526 [debug] [Thread-1 (]: Began running node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:38:30.018060 [info ] [Thread-1 (]: 14 of 16 START test unique_dim_genome_tags_tag_id .............................. [RUN]
+[0m18:38:30.019146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.relevence_score_test, now test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe)
+[0m18:38:30.019690 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:38:30.035046 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe"
+[0m18:38:30.036839 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:38:30.045455 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe"
+[0m18:38:30.049772 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe"
+[0m18:38:30.050771 [debug] [Thread-1 (]: On test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    tag_id as unique_field,
+    count(*) as n_records
+
+from MOVIELENS.DEV.dim_genome_tags
+where tag_id is not null
+group by tag_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe"} */
+[0m18:38:30.191369 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.140 seconds
+[0m18:38:30.194367 [info ] [Thread-1 (]: 14 of 16 PASS unique_dim_genome_tags_tag_id .................................... [[32mPASS[0m in 0.18s]
+[0m18:38:30.196368 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe
+[0m18:38:30.197368 [debug] [Thread-1 (]: Began running node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:38:30.197368 [info ] [Thread-1 (]: 15 of 16 START test unique_dim_movies_movie_id ................................. [RUN]
+[0m18:38:30.198368 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.unique_dim_genome_tags_tag_id.e9353d4abe, now test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b)
+[0m18:38:30.199367 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:38:30.205364 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b"
+[0m18:38:30.207439 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:38:30.214989 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b"
+[0m18:38:30.218988 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b"
+[0m18:38:30.219989 [debug] [Thread-1 (]: On test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    movie_id as unique_field,
+    count(*) as n_records
+
+from MOVIELENS.DEV.dim_movies
+where movie_id is not null
+group by movie_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b"} */
+[0m18:38:30.360225 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.139 seconds
+[0m18:38:30.363965 [info ] [Thread-1 (]: 15 of 16 PASS unique_dim_movies_movie_id ....................................... [[32mPASS[0m in 0.16s]
+[0m18:38:30.366017 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b
+[0m18:38:30.366017 [debug] [Thread-1 (]: Began running node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:38:30.367017 [info ] [Thread-1 (]: 16 of 16 START test unique_dim_users_user_id ................................... [RUN]
+[0m18:38:30.369017 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.movielens_dbt.unique_dim_movies_movie_id.2e7fb7860b, now test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9)
+[0m18:38:30.369017 [debug] [Thread-1 (]: Began compiling node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:38:30.379016 [debug] [Thread-1 (]: Writing injected SQL for node "test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9"
+[0m18:38:30.381014 [debug] [Thread-1 (]: Began executing node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:38:30.391447 [debug] [Thread-1 (]: Writing runtime sql for node "test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9"
+[0m18:38:30.397983 [debug] [Thread-1 (]: Using snowflake connection "test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9"
+[0m18:38:30.399305 [debug] [Thread-1 (]: On test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    user_id as unique_field,
+    count(*) as n_records
+
+from MOVIELENS.DEV.dim_users
+where user_id is not null
+group by user_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9"} */
+[0m18:38:30.566579 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.166 seconds
+[0m18:38:30.572190 [info ] [Thread-1 (]: 16 of 16 PASS unique_dim_users_user_id ......................................... [[32mPASS[0m in 0.20s]
+[0m18:38:30.573969 [debug] [Thread-1 (]: Finished running node test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9
+[0m18:38:30.576198 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:38:30.576198 [debug] [MainThread]: Connection 'list_MOVIELENS_snapshots' was left open.
+[0m18:38:30.576198 [debug] [MainThread]: On list_MOVIELENS_snapshots: Close
+[0m18:38:30.721337 [debug] [MainThread]: Connection 'test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9' was left open.
+[0m18:38:30.722395 [debug] [MainThread]: On test.movielens_dbt.unique_dim_users_user_id.bcdc17b9f9: Close
+[0m18:38:30.893652 [info ] [MainThread]: 
+[0m18:38:30.898427 [info ] [MainThread]: Finished running 16 data tests in 0 hours 0 minutes and 8.14 seconds (8.14s).
+[0m18:38:30.905318 [debug] [MainThread]: Command end result
+[0m18:38:30.991073 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:38:31.000130 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:38:31.019182 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\run_results.json
+[0m18:38:31.021194 [info ] [MainThread]: 
+[0m18:38:31.021194 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:38:31.021194 [info ] [MainThread]: 
+[0m18:38:31.021194 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=16
+[0m18:38:31.025266 [debug] [MainThread]: Command `dbt test` succeeded at 18:38:31.025266 after 12.27 seconds
+[0m18:38:31.026263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854CD770B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001854BAE4AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001856F7A1CA0>]}
+[0m18:38:31.027261 [debug] [MainThread]: Flushing usage events
+[0m18:38:33.088755 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:39:44.455585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D64459C290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D64255BCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D644ED4560>]}
+
+
+============================== 18:39:44.465272 | 6aabd972-8ef7-47d7-847b-c9b4167a4c93 ==============================
+[0m18:39:44.465272 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:39:44.466687 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt snapshot', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'use_colors': 'True', 'empty': 'False', 'write_json': 'True', 'warn_error': 'None', 'introspect': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'log_format': 'default', 'fail_fast': 'False'}
+[0m18:39:46.397961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D644900AD0>]}
+[0m18:39:46.514037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D665AF5DF0>]}
+[0m18:39:46.517282 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:39:47.324725 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m18:39:47.769473 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:39:47.769473 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:39:47.939107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667A45EE0>]}
+[0m18:39:48.226290 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:39:48.227453 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:39:48.283136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667BC27B0>]}
+[0m18:39:48.283136 [info ] [MainThread]: Found 13 models, 1 snapshot, 1 analysis, 16 data tests, 1 seed, 6 sources, 609 macros
+[0m18:39:48.283136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6459F7350>]}
+[0m18:39:48.283136 [info ] [MainThread]: 
+[0m18:39:48.293163 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:39:48.293163 [info ] [MainThread]: 
+[0m18:39:48.295692 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:39:48.298088 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS'
+[0m18:39:48.655219 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS"
+[0m18:39:48.655219 [debug] [ThreadPool]: On list_MOVIELENS: show terse schemas in database MOVIELENS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS"} */
+[0m18:39:48.655219 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:51.187099 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.530 seconds
+[0m18:39:51.196570 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MOVIELENS_DEV'
+[0m18:39:51.218219 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_DEV"
+[0m18:39:51.218219 [debug] [ThreadPool]: On list_MOVIELENS_DEV: show objects in MOVIELENS.DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_DEV"} */;
+[0m18:39:51.218219 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:53.038378 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 1.818 seconds
+[0m18:39:53.042898 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MOVIELENS_DEV, now list_MOVIELENS_snapshots)
+[0m18:39:53.053958 [debug] [ThreadPool]: Using snowflake connection "list_MOVIELENS_snapshots"
+[0m18:39:53.055556 [debug] [ThreadPool]: On list_MOVIELENS_snapshots: show objects in MOVIELENS.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "connection_name": "list_MOVIELENS_snapshots"} */;
+[0m18:39:53.197236 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.145 seconds
+[0m18:39:53.197236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667C18D40>]}
+[0m18:39:53.197236 [debug] [Thread-1 (]: Began running node snapshot.movielens_dbt.snap_tags
+[0m18:39:53.211302 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshots.snap_tags ...................................... [RUN]
+[0m18:39:53.213042 [debug] [Thread-1 (]: Acquiring new snowflake connection 'snapshot.movielens_dbt.snap_tags'
+[0m18:39:53.214201 [debug] [Thread-1 (]: Began compiling node snapshot.movielens_dbt.snap_tags
+[0m18:39:53.265038 [debug] [Thread-1 (]: Began executing node snapshot.movielens_dbt.snap_tags
+[0m18:39:53.390030 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:53.390030 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: describe table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:53.393412 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:39:55.104999 [debug] [Thread-1 (]: SQL status: SUCCESS 9 in 1.714 seconds
+[0m18:39:55.245145 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:55.245145 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: create or replace temporary table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS__dbt_tmp"
+as (
+    
+    
+    with snapshot_query as (
+
+        
+
+
+
+SELECT
+md5(cast(coalesce(cast(user_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(movie_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(tag as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) AS row_key,
+    user_id,
+    movie_id,
+    tag,
+    CAST(tag_timestamp AS TIMESTAMP_NTZ) AS tag_timestamp
+FROM MOVIELENS.DEV.src_tags
+LIMIT 100 
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+
+        from "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+,
+            tag_timestamp as dbt_updated_at,
+            tag_timestamp as dbt_valid_from,
+            
+  
+  coalesce(nullif(tag_timestamp, tag_timestamp), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(user_id as varchar ), '')
+         || '|' || coalesce(cast(movie_id as varchar ), '')
+         || '|' || coalesce(cast(tag as varchar ), '')
+         || '|' || coalesce(cast(tag_timestamp as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+,
+            tag_timestamp as dbt_updated_at,
+            tag_timestamp as dbt_valid_from,
+            tag_timestamp as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    deletes_source_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+
+        from snapshot_query
+    ),
+    
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_1 = source_data.dbt_unique_key_1)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_2 = source_data.dbt_unique_key_2)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_3 = source_data.dbt_unique_key_3)
+
+        
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key_1 is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key_1 is not null
+    
+ and (
+               (snapshotted_data.dbt_valid_from < source_data.tag_timestamp)
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_1 = source_data.dbt_unique_key_1)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_2 = source_data.dbt_unique_key_2)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_3 = source_data.dbt_unique_key_3)
+
+        
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.tag_timestamp)
+        )
+    )
+    ,
+    deletes as (
+
+        select
+            'delete' as dbt_change_type,
+            source_data.*,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to,
+            snapshotted_data.dbt_scd_id
+        from snapshotted_data
+        left join deletes_source_data as source_data
+            on 
+    
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_1 = source_data.dbt_unique_key_1)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_2 = source_data.dbt_unique_key_2)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_3 = source_data.dbt_unique_key_3)
+
+        
+    
+
+            where 
+    
+        source_data.dbt_unique_key_1 is null
+    
+
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+    union all
+    select * from deletes
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */;
+[0m18:39:56.095127 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.845 seconds
+[0m18:39:56.103167 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.103167 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: describe table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:56.209916 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 0.105 seconds
+[0m18:39:56.215944 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.217953 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: describe table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:56.320979 [debug] [Thread-1 (]: SQL status: SUCCESS 9 in 0.102 seconds
+[0m18:39:56.323736 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.323736 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: describe table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:56.433296 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 0.103 seconds
+[0m18:39:56.443456 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.443456 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: describe table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:56.538822 [debug] [Thread-1 (]: SQL status: SUCCESS 9 in 0.095 seconds
+[0m18:39:56.552887 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.554896 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: describe table "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:56.649569 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 0.095 seconds
+[0m18:39:56.684173 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.684173 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: select * from (
+        
+    
+    with snapshot_query as (
+
+        
+
+
+
+SELECT
+md5(cast(coalesce(cast(user_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(movie_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(tag as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) AS row_key,
+    user_id,
+    movie_id,
+    tag,
+    CAST(tag_timestamp AS TIMESTAMP_NTZ) AS tag_timestamp
+FROM MOVIELENS.DEV.src_tags
+LIMIT 100 
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+
+        from "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+,
+            tag_timestamp as dbt_updated_at,
+            tag_timestamp as dbt_valid_from,
+            
+  
+  coalesce(nullif(tag_timestamp, tag_timestamp), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(user_id as varchar ), '')
+         || '|' || coalesce(cast(movie_id as varchar ), '')
+         || '|' || coalesce(cast(tag as varchar ), '')
+         || '|' || coalesce(cast(tag_timestamp as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+,
+            tag_timestamp as dbt_updated_at,
+            tag_timestamp as dbt_valid_from,
+            tag_timestamp as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    deletes_source_data as (
+
+        select *, 
+    
+        
+            user_id as dbt_unique_key_1 ,
+        
+            movie_id as dbt_unique_key_2 ,
+        
+            tag as dbt_unique_key_3
+        
+    
+
+        from snapshot_query
+    ),
+    
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_1 = source_data.dbt_unique_key_1)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_2 = source_data.dbt_unique_key_2)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_3 = source_data.dbt_unique_key_3)
+
+        
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key_1 is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key_1 is not null
+    
+ and (
+               (snapshotted_data.dbt_valid_from < source_data.tag_timestamp)
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_1 = source_data.dbt_unique_key_1)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_2 = source_data.dbt_unique_key_2)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_3 = source_data.dbt_unique_key_3)
+
+        
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.tag_timestamp)
+        )
+    )
+    ,
+    deletes as (
+
+        select
+            'delete' as dbt_change_type,
+            source_data.*,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to,
+            snapshotted_data.dbt_scd_id
+        from snapshotted_data
+        left join deletes_source_data as source_data
+            on 
+    
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_1 = source_data.dbt_unique_key_1)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_2 = source_data.dbt_unique_key_2)
+ and
+        
+	    
+	    
+	    (snapshotted_data.dbt_unique_key_3 = source_data.dbt_unique_key_3)
+
+        
+    
+
+            where 
+    
+        source_data.dbt_unique_key_1 is null
+    
+
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+    union all
+    select * from deletes
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:56.895732 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.199 seconds
+[0m18:39:56.895732 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:56.895732 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:57.014425 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.112 seconds
+[0m18:39:57.014425 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.movielens_dbt.snap_tags"
+[0m18:39:57.019253 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:57.020944 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:57.154255 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.140 seconds
+[0m18:39:57.154255 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:57.154255 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: merge into "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS" as DBT_INTERNAL_DEST
+    using "MOVIELENS"."SNAPSHOTS"."SNAP_TAGS__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("ROW_KEY", "USER_ID", "MOVIE_ID", "TAG", "TAG_TIMESTAMP", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("ROW_KEY", "USER_ID", "MOVIE_ID", "TAG", "TAG_TIMESTAMP", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */;
+[0m18:39:57.535686 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.371 seconds
+[0m18:39:57.535686 [debug] [Thread-1 (]: Using snowflake connection "snapshot.movielens_dbt.snap_tags"
+[0m18:39:57.535686 [debug] [Thread-1 (]: On snapshot.movielens_dbt.snap_tags: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "movielens_dbt", "target_name": "dev", "node_id": "snapshot.movielens_dbt.snap_tags"} */
+[0m18:39:57.855599 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.318 seconds
+[0m18:39:57.891007 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6aabd972-8ef7-47d7-847b-c9b4167a4c93', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6426980E0>]}
+[0m18:39:57.892650 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshots.snap_tags ...................................... [[32mSUCCESS 0[0m in 4.68s]
+[0m18:39:57.894061 [debug] [Thread-1 (]: Finished running node snapshot.movielens_dbt.snap_tags
+[0m18:39:57.896659 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:39:57.896659 [debug] [MainThread]: Connection 'list_MOVIELENS' was left open.
+[0m18:39:57.896659 [debug] [MainThread]: On list_MOVIELENS: Close
+[0m18:39:58.100525 [debug] [MainThread]: Connection 'list_MOVIELENS_snapshots' was left open.
+[0m18:39:58.100525 [debug] [MainThread]: On list_MOVIELENS_snapshots: Close
+[0m18:39:58.256215 [debug] [MainThread]: Connection 'snapshot.movielens_dbt.snap_tags' was left open.
+[0m18:39:58.256215 [debug] [MainThread]: On snapshot.movielens_dbt.snap_tags: Close
+[0m18:39:58.452591 [info ] [MainThread]: 
+[0m18:39:58.452591 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 10.16 seconds (10.16s).
+[0m18:39:58.452591 [debug] [MainThread]: Command end result
+[0m18:39:58.531480 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\manifest.json
+[0m18:39:58.539001 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\semantic_manifest.json
+[0m18:39:58.552278 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\aritra.ganguly\Pictures\dbt-projects\dbt-movielens-data-analysis\movielens_dbt\target\run_results.json
+[0m18:39:58.553615 [info ] [MainThread]: 
+[0m18:39:58.554616 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:39:58.555675 [info ] [MainThread]: 
+[0m18:39:58.556812 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m18:39:58.558813 [debug] [MainThread]: Command `dbt snapshot` succeeded at 18:39:58.557809 after 14.34 seconds
+[0m18:39:58.559714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D644E6F3B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6669BB8C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D667E5F770>]}
+[0m18:39:58.559714 [debug] [MainThread]: Flushing usage events
+[0m18:40:00.732590 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:40:34.102014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818B860A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818987BE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818BCD39B0>]}
+
+
+============================== 18:40:34.107544 | b3771904-627d-4a15-8c7a-e887864d2d6c ==============================
+[0m18:40:34.107544 [info ] [MainThread]: Running with dbt=1.10.13
+[0m18:40:34.107544 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt clean', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'target_path': 'None', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\aritra.ganguly\\Pictures\\dbt-projects\\dbt-movielens-data-analysis\\movielens_dbt\\logs', 'profiles_dir': 'C:\\Users\\aritra.ganguly\\.dbt', 'warn_error': 'None', 'introspect': 'True', 'use_colors': 'True', 'empty': 'None', 'cache_selected_only': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'debug': 'False', 'log_format': 'default', 'fail_fast': 'False'}
+[0m18:40:34.513718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b3771904-627d-4a15-8c7a-e887864d2d6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818C813AA0>]}
+[0m18:40:34.739974 [debug] [MainThread]: Command `dbt clean` succeeded at 18:40:34.739974 after 0.92 seconds
+[0m18:40:34.740975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818C2DFA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818C813AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001818C5D3CE0>]}
+[0m18:40:34.741976 [debug] [MainThread]: Flushing usage events
+[0m18:40:36.590501 [debug] [MainThread]: An error was encountered while trying to flush usage events
