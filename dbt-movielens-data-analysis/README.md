@@ -6,13 +6,22 @@ The goal is to showcase best practices in **data modeling, transformation, and a
 
 ## 🚀 Project Overview
 
-![image](dbt-movielens-data-analysis/docs/project-architecture.png)
-
-- **Dataset**: [MovieLens 20M](https://grouplens.org/datasets/movielens/20m/) (20 million ratings, 465k tags, 27k movies, 138k users)
-- **Data Warehouse**: [Snowflake](https://www.snowflake.com/)
-- **Transformation Layer**: [DBT](https://www.getdbt.com/)
-- **Orchestration**: DBT CLI / Cloud
-- **Visualization (Optional)**: BI tools like Tableau, Power BI
+<table>
+  <tr>
+    <td>
+      <img src="docs/project-architecture.png" alt="Project Architecture" width="300"/>
+    </td>
+    <td>
+      <ul>
+        <li><strong>Dataset</strong>: <a href="https://grouplens.org/datasets/movielens/20m/">MovieLens 20M</a> (20 million ratings, 465k tags, 27k movies, 138k users)</li>
+        <li><strong>Data Warehouse</strong>: <a href="https://www.snowflake.com/">Snowflake</a></li>
+        <li><strong>Transformation Layer</strong>: <a href="https://www.getdbt.com/">DBT</a></li>
+        <li><strong>Orchestration</strong>: DBT CLI / Cloud</li>
+        <li><strong>Visualization (Optional)</strong>: BI tools like Tableau, Power BI</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## 📂 Repository Structure
 
@@ -127,4 +136,4 @@ List of the below tables provides a categorized overview of commonly used **dbt 
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support.
 - Find [dbt events](https://events.getdbt.com) near you.
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices.
-- YouTube Reference: [DBT Projects Tutorial Video](youtube.com/watch?v=zZVQluYDwYY&pp=ygUMZGJ0IHByb2plY3Rz)
+- YouTube Reference: [DBT Projects Tutorial Video](https://www.youtube.com/watch?v=zZVQluYDwYY)
