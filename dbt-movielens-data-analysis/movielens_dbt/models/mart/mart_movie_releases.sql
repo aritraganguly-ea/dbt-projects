@@ -1,4 +1,4 @@
-{{ config(materialized = 'table') }}
+{{ config(materialized='table') }}
 
 WITH fct_ratings AS
   (SELECT *

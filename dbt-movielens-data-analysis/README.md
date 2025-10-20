@@ -1,10 +1,12 @@
 # 🎬 MovieLens 20M Data Analysis & ELT with DBT + Snowflake
 
-This project demonstrates how to build a modern **data pipeline** for analyzing the [MovieLens 20M dataset](https://grouplens.org/datasets/movielens/20m/) using **Snowflake** as the cloud data warehouse and **DBT (Data Build Tool)** for ELT (Extract, Load, Transform) workflows.
+This project demonstrates how to build a modern **data pipeline** for analyzing the **MovieLens 20M dataset** using **Snowflake** as the cloud data warehouse and **DBT (Data Build Tool)** for ELT (Extract, Load, Transform) workflows.
 
 The goal is to showcase best practices in **data modeling, transformation, and analytics engineering** while enabling scalable insights into movie ratings, user behavior, and recommendation patterns.
 
 ## 🚀 Project Overview
+
+![image](dbt-movielens-data-analysis/docs/project-architecture.png)
 
 - **Dataset**: [MovieLens 20M](https://grouplens.org/datasets/movielens/20m/) (20 million ratings, 465k tags, 27k movies, 138k users)
 - **Data Warehouse**: [Snowflake](https://www.snowflake.com/)
@@ -34,18 +36,18 @@ The goal is to showcase best practices in **data modeling, transformation, and a
 
 ## 🛠️ Setup Instructions
 
-### **Step 1:** Clone the Repository.
+#### **Step 1:** Clone the Repository
 
 ```bash
 git clone https://github.com/gangulyaritra/dbt-projects.git
 cd dbt-movielens-data-analysis\movielens_dbt
 ```
 
-### **Step 2:** Load Data into Snowflake.
+#### **Step 2:** Load Data into Snowflake
 
 Run the `sf_user_creation.sql` script in the Snowflake Worksheet to configure the necessary user and environment, and then proceed to load the MovieLens 20M dataset into Snowflake.
 
-### **Step 3:** Configure DBT.
+#### **Step 3:** Configure DBT
 
 - Install DBT (CLI or Cloud): `pip install dbt-snowflake`
 - Update `profiles.yml` with Snowflake credentials.
@@ -59,12 +61,12 @@ List of the below tables provides a categorized overview of commonly used **dbt 
 
 ### 🔧 Project Setup & Configuration
 
-| Command     | Description                                    |
-| ----------- | ---------------------------------------------- |
-| `dbt init`  | Initialize a new dbt project.                  |
-| `dbt debug` | Test connection and validate configuration.    |
-| `dbt deps`  | Install dependencies from `packages.yml`.      |
-| `dbt clean` | Remove `dbt_modules` and `target` directories. |
+| Command     | Description                                     |
+| ----------- | ----------------------------------------------- |
+| `dbt init`  | Initialize a new dbt project.                   |
+| `dbt debug` | Test connection and validate configuration.     |
+| `dbt deps`  | Install dependencies from `packages.yml`.       |
+| `dbt clean` | Remove `dbt_packages` and `target` directories. |
 
 ---
 
@@ -125,3 +127,4 @@ List of the below tables provides a categorized overview of commonly used **dbt 
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support.
 - Find [dbt events](https://events.getdbt.com) near you.
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices.
+- YouTube Reference: [DBT Projects Tutorial Video](youtube.com/watch?v=zZVQluYDwYY&pp=ygUMZGJ0IHByb2plY3Rz)
